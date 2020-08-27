@@ -8,4 +8,4 @@ Validar acesso ao blog robotizandotestes
 
 Validar pesquisa de postagens
     Pesquisar a postagem "season premiere"
-    Clicar no post "Season Premere: Introdução ao Robot Framework" encontrado
+    Clicar no post "Season Running - Ep. 02: Comandos básicos de Execução" encontrado
