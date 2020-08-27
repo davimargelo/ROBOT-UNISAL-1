@@ -1,7 +1,7 @@
 # run with
-    robot -d results Atividade_1/TestSuite
-        robot -d results Atividade_1/TestSuite/Teste_Atividade_1.robot
-        robot -d results Atividade_1/TestSuite/Teste_TestSuite.robot
+    robot -d results Atividade-1_19-08-2020/TestSuite
+        robot -d results Atividade-1_19-08-2020/TestSuite/Teste_Atividade_1.robot
+        robot -d results Atividade-1_19-08-2020/TestSuite/Teste_TestSuite.robot
 
 # Instalações necessárias
     Python 3.x [https://www.python.org/downloads/]

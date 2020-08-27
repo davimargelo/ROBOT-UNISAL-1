@@ -1,5 +1,5 @@
 *** Settings ***
-Resource        ./Resource/Resource.robot
+Resource        ../Resource/Resource.robot
 Suite Teardown  Fechar Navegador
 
 *** Test Case ***
