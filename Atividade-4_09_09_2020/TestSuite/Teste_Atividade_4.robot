@@ -5,9 +5,7 @@ Resource    ../Functions/Teste_Keywords.robot
 
 Test title
     [Tags]              Teste
-    ABRIR PHPTRAVELS
-    PESQUISAR VIAGEM
-    CHECK IN OUT
-    CRIANCAS
-    BUSCAR
-    TIRAR PRINT
+    Login e-commerce
+    Add to Cart
+    Verifica Saldo
+    Verifica Valor Total da Compra
