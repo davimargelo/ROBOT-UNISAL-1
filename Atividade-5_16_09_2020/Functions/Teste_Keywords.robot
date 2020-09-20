@@ -1,7 +1,7 @@
 *** Settings ***
 Library     SeleniumLibrary
 Resource    ../PageObjects/Teste_PageObjects.robot
-Resource    ../TestSuite/Teste_Atividade_4.robot
+Resource    ../TestSuite/Teste_Atividade_5.robot
 
 *** Keywords ***
 Login e-commerce
@@ -19,13 +19,13 @@ Add to Cart
     sleep                               5
     Click Element                       ${BOTAOPROCEED}
     Wait Until Page Contains Element    ${BOTAOPLUS}               timeout=60.0
-    Click Element                       ${BOTAOPLUS}
 Verifica Saldo
-    ${VERIFICAVALORTOTAL}=    Run Keyword And Return Status      Verifica Valor Total da Compra
-    Run Keyword If            '${VERIFICAVALORTOTAL}'=='True'    Run Keywords
-    ...                       Capture Page Screenshot
-    ...                       AND                                Log To Console                    Saldo Suficiente!
-    ...                       ELSE                               Run Keywords                      Capture Page Screenshot    AND    Log To Console    Saldo Insuficiente!
+    ${VERIFICAVALORTOTAL}=    Run Keyword And Return Status    Verifica Valor Total da Compra
+
+    Run Keyword If    '${VERIFICAVALORTOTAL}'=='True'    Run Keywords
+    ...               Capture Page Screenshot
+    ...               AND                                Log To Console    Saldo Suficiente!
+    ...               ELSE                               Run Keywords      Capture Page Screenshot    AND    Log To Console    Saldo Insuficiente!    AND    Click Element    ${BOTAOPLUS}    AND    Verifica Saldo
 Verifica Valor Total da Compra
     Wait Until Page Contains Element    ${LIXEIRACOMPRA}       timeout=60.0
     Page Should Contain Element         ${VALORTOTALCOMPRA}
