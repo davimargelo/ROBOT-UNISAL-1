@@ -19,13 +19,19 @@ Add to Cart
     sleep                               5
     Click Element                       ${BOTAOPROCEED}
     Wait Until Page Contains Element    ${BOTAOPLUS}                      timeout=60.0
+    
+    FOR    ${INDEX}    IN RANGE    1    5
+        Click Element    ${BOTAOPLUS}
+    END
+
+    Verifica Saldo
+
 Verifica Saldo
     ${VERIFICAVALORTOTAL}=    Run Keyword And Return Status    Verifica Valor Total da Compra
-    sleep                               1
     Run Keyword If    '${VERIFICAVALORTOTAL}'=='True'    Run Keywords
     ...               Capture Page Screenshot
     ...               AND                                Log To Console    Saldo Suficiente!
-    ...               ELSE                               Run Keywords      Capture Page Screenshot    AND    Log To Console    Saldo Insuficiente!    AND    Click Element    ${BOTAOPLUS}    AND    Verifica Saldo
+    ...               ELSE                               Run Keywords      Capture Page Screenshot    AND    Log To Console    Saldo Insuficiente!
 Verifica Valor Total da Compra
     Wait Until Page Contains Element    ${LIXEIRACOMPRA}       timeout=60.0
     Page Should Contain Element         ${VALORTOTALCOMPRA}
