@@ -8,4 +8,4 @@ Test title
     Login e-commerce
     Add to Cart
     Verifica Saldo
-    Verifica Valor Total da Compra
+    # Verifica Valor Total da Compra

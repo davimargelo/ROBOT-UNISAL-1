@@ -20,6 +20,8 @@ Add to Cart
     Click Element                       ${BOTAOPROCEED}
     Wait Until Page Contains Element    ${BOTAOPLUS}               timeout=60.0
     Click Element                       ${BOTAOPLUS}
+    Verifica Saldo
+    sleep                               1
 Verifica Saldo
     ${VERIFICAVALORTOTAL}=    Run Keyword And Return Status      Verifica Valor Total da Compra
     Run Keyword If            '${VERIFICAVALORTOTAL}'=='True'    Run Keywords
