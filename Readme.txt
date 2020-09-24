@@ -25,6 +25,9 @@ Iago Borges da Silva            - 170004614
     
     # Atividade 6:
         robot -d results Atividade-6_16_09_2020/TestSuite/Teste_Atividade_6.robot
+    
+    # Atividade 7:
+        robot -d results Atividade-7_23_09_2020/TestSuite/Teste_Atividade_7.robot
             
 # Instalações necessárias
     Python 3.x [https://www.python.org/downloads/]
